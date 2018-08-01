@@ -31,6 +31,7 @@ public class AreaController {
         return modelMap;
     }
 
+    //RequestMethod.PUT 修改的意思
     @RequestMapping(value="/area",method = RequestMethod.PUT)
     public Map<String,Object> insertArea(@RequestBody Area area){
         Map<String,Object> modelMap = new HashMap<>();
@@ -39,7 +40,7 @@ public class AreaController {
         return modelMap;
     }
 
-    @RequestMapping(value="/area",method = RequestMethod.PATCH)
+    @RequestMapping(value="/updatearea",method = RequestMethod.PUT)
     public Map<String,Object> updataArea(@RequestBody Area area){
         Map<String,Object> modelMap = new HashMap<>();
         boolean result = areaService.updateArea(area);
